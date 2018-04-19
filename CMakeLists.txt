@@ -8,6 +8,6 @@ set(CMAKE_CXX_FLAGS -pthread)
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIRS})
 
-add_executable(${PROJECT_NAME} "main.cpp" "condition.cpp")
+add_executable(${PROJECT_NAME} "main.cpp" "condition.cpp" "key.cpp")
 
 target_link_libraries(dining-philosophers ${CURSES_LIBRARIES})
