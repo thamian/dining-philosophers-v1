@@ -6,6 +6,7 @@ class CursesTerminal
 {
 public:
     CursesTerminal();
+    ~CursesTerminal();
 };
 
 #endif // CURSESTERMINAL_H

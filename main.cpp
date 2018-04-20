@@ -1,4 +1,5 @@
 #include "condition.h"
+#include "curses/cursesterminal.h"
 #include "key.h"
 #include "keypressedcondition.h"
 #include "philosopher.h"
@@ -10,6 +11,7 @@ int main()
 {
     std::unique_ptr<Key> key(new Key());
     std::unique_ptr<Condition> endCondition(new KeyPressedCondition(*key));
+    std::unique_ptr<CursesTerminal> cursesTerminal(new CursesTerminal());
 
     std::thread keyPressDetector(&Key::waitForPress, std::ref(*key));
 
