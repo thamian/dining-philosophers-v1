@@ -2,7 +2,9 @@
 #define CURSESTEXT_H
 
 
-class CursesText
+#include "cursesobject.h"
+
+class CursesText : public CursesObject
 {
 public:
     CursesText();

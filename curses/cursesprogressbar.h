@@ -2,7 +2,9 @@
 #define CURSESPROGRESSBAR_H
 
 
-class CursesProgressBar
+#include "cursesobject.h"
+
+class CursesProgressBar : public CursesObject
 {
 public:
     CursesProgressBar();
