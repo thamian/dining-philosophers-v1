@@ -1,0 +1,1 @@
+#include "cursesobject.h"
