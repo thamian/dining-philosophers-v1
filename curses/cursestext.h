@@ -17,7 +17,6 @@ public:
     void set(CursesColorPair colorPair, int x, int y);
     void print() override;
     void moveTo(int x, int y) override;
-    void update() override;
 
 private:
     std::vector<std::string> text_;

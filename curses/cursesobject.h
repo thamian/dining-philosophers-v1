@@ -9,7 +9,6 @@ class CursesObject
 public:
     virtual void print() = 0;
     virtual void moveTo(int x, int y) = 0;
-    virtual void update() = 0;
 
 protected:
     std::mutex objectMutex;

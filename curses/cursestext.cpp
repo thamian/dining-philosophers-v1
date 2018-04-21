@@ -35,8 +35,3 @@ void CursesText::moveTo(int x, int y)
     x_ = x;
     y_ = y;
 }
-
-void CursesText::update()
-{
-
-}
