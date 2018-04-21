@@ -3,7 +3,7 @@
 
 #include <curses.h>
 
-CursesTerminal::CursesTerminal()
+CursesTerminal::CursesTerminal(std::vector<std::unique_ptr<CursesObject>>& objects) : objects_(std::move(objects))
 {
     initscr();
     start_color();
