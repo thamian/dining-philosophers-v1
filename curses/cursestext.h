@@ -3,11 +3,16 @@
 
 
 #include "cursesobject.h"
+#include "../file.h"
 
 class CursesText : public CursesObject
 {
 public:
-    CursesText();
+    CursesText(File& file);
+    CursesText(std::vector<std::string> text);
+
+private:
+    std::vector<std::string> text_;
 };
 
 #endif // CURSESTEXT_H
