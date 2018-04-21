@@ -16,3 +16,27 @@ void CursesText::set(CursesColorPair colorPair, int x, int y)
     x_ = x;
     y_ = y;
 }
+
+void CursesText::print()
+{
+    std::lock_guard<std::mutex> lock(objectMutex);
+    for (int i = 0; i < text_.size(); i++)
+    {
+        move(x_ + i, y_);
+        attron(COLOR_PAIR(colorPair_));
+        printw(text_[i].data());
+    }
+    refresh();
+}
+
+void CursesText::moveTo(int x, int y)
+{
+    std::lock_guard<std::mutex> lock(objectMutex);
+    x_ = x;
+    y_ = y;
+}
+
+void CursesText::update()
+{
+
+}

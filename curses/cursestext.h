@@ -6,6 +6,8 @@
 #include "cursescolorpair.h"
 #include "../file.h"
 
+#include <curses.h>
+
 class CursesText : public CursesObject
 {
 public:
@@ -13,6 +15,9 @@ public:
     CursesText(std::vector<std::string> text);
 
     void set(CursesColorPair colorPair, int x, int y);
+    void print() override;
+    void moveTo(int x, int y) override;
+    void update() override;
 
 private:
     std::vector<std::string> text_;
