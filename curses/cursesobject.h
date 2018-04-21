@@ -11,7 +11,7 @@ public:
     virtual void moveTo(int x, int y) = 0;
     virtual void update() = 0;
 
-private:
+protected:
     std::mutex objectMutex;
 };
 
